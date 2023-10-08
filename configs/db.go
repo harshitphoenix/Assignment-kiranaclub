@@ -8,7 +8,7 @@ import (
 )
 
 func Connect() (*gorm.DB, error) {
-	db, err := gorm.Open(postgres.Open("postgresql://postgres:BmJSabBG9RBYQV9fWNh9@containers-us-west-163.railway.app:5454/railway"), &gorm.Config{})
+	db, err := gorm.Open(postgres.Open("DB_URL"), &gorm.Config{})
 	fmt.Println("Connection")
 	if err != nil {
 		fmt.Println("error", err)
